@@ -6,15 +6,14 @@ import (
 	"strconv"
 	"sync"
 
-	"FealtyX/models"
-
 	"github.com/gorilla/mux"
+	"FealtyX/models"
 )
 
 var (
-	Students   = make(map[int]models.Student)
+	Students   = make(map[int]models.Student) // Exported variable
 	NextID     = 1
-	StudentsMu sync.Mutex
+	StudentsMu sync.Mutex // Exported variable
 )
 
 func CreateStudent(w http.ResponseWriter, r *http.Request) {
