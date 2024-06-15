@@ -1,17 +1,37 @@
-### README.md
-
 # FealtyX - GoLang Assignment
 
-## Overview
+## Installation
 
-REST API built using Go that performs basic CRUD (Create, Read, Update, Delete) operations on a list of students. Each student has the following attributes:
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/ashuthe1/Golang-with-Integration.git
+    cd Golang-with-Integration
+    ```
 
-- ID (integer)
-- Name (string)
-- Age (integer)
-- Email (string)
+2. **Initialize a Go module**:
+    ```sh
+    go mod init FealtyX
+    go mod tidy
+    ```
 
-Additionally, the API integrates with the Google PaLM 2 API and LLama3 to generate AI-based responses for student summaries.
+3. **Run the application**:
+    ```sh
+    go run main.go
+    ```
+
+## Project Structure
+
+```
+.
+├── handlers
+│   └── handlers.go
+├── models
+│   └── models.go
+├── ollama
+│   └── ollama.go
+├── main.go
+└── README.md
+```
 
 ## Features
 
@@ -34,20 +54,6 @@ Additionally, the API integrates with the Google PaLM 2 API and LLama3 to genera
 
 - **Input Validation**: 
   - Ensures input data for creating and updating students is valid.
-
-## Project Structure
-
-```
-.
-├── handlers
-│   └── handlers.go
-├── models
-│   └── models.go
-├── ollama
-│   └── ollama.go
-├── main.go
-└── README.md
-```
 
 ## API Endpoints
 
@@ -124,25 +130,6 @@ Additionally, the API integrates with the Google PaLM 2 API and LLama3 to genera
   ```sh
   curl -X GET http://localhost:8080/students/1/summary
   ```
-
-## Installation
-
-1. **Clone the repository**:
-    ```sh
-    git clone https://github.com/ashuthe1/Golang-ollama.git
-    cd Golang-ollama
-    ```
-
-2. **Initialize a Go module**:
-    ```sh
-    go mod init FealtyX
-    go mod tidy
-    ```
-
-3. **Run the application**:
-    ```sh
-    go run main.go
-    ```
 
 ## Concurrency
 
