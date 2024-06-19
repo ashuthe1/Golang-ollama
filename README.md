@@ -145,7 +145,3 @@ Errors are appropriately handled, such as:
 ## Input Validation
 
 Input data for creating and updating students is validated to ensure it meets the required format and constraints.
-
----
-
-This completes the setup and provides the necessary details to use the FealtyX API. Happy coding!
